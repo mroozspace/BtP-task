@@ -1,0 +1,71 @@
+
+
+
+@media screen and (max-width: map-get($breakpoints, phone-landscape)){
+
+	.o-main{
+		width: 85%;
+		margin-bottom: 68px;
+	}
+
+	.o-landing{
+		height: 621px;
+	}
+
+	.c-landing{
+		
+		&__container{
+			width: 55%;
+		}
+
+		&__img{
+		top:0;
+		height: 621px;
+		}
+	}
+
+	.c-header{
+		height: 131px;
+	}
+	
+	.c-icon__container{
+		display:none;
+	}
+
+	.c-iphone{
+		background: url("/public/img/iphone-m.png") no-repeat center;
+		background-size: contain;
+
+		position: absolute;
+		/*top: 400px;*/
+		top:60%;
+		left: 35%;
+		/*right: 100px;*/
+		
+		width: 60%;
+		height: 60%;
+	}
+
+	.c-text-sec{
+		margin-top: 108px;
+		margin-bottom: 65px;
+
+		&__text{
+		width: 100%;
+
+			&--right{
+				float: none;
+			}
+		}
+	}
+
+	.c-box{
+		width: 100%;
+		padding-left: 30px;
+		
+		&__header{
+			font-size: 27px;
+		}
+	}
+
+}

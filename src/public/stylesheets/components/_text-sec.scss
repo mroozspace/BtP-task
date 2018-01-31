@@ -1,0 +1,31 @@
+.c-text-sec{
+
+	margin-top: 117px;
+	margin-bottom: 83px;
+
+	&__header{
+		color: #222626;
+		font-size: 35px;
+		font-weight: 300;
+		line-height: 24px;
+	}
+
+	&__text{
+		display: inline-block;
+		color: #959595;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 24px;
+		max-width: 569px;
+		width: 50%;
+		margin-bottom: 0px;
+
+		&--right{
+			float: right;
+			width: 46%;
+		}
+		&--padding{
+			padding-top: 96px;
+		}
+	}
+}
