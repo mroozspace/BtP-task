@@ -1,6 +1,5 @@
 .o-landing{
 	height: 948px;
-	/*@include flex--center;*/
 	display: flex;
 	align-items: center;
 }
@@ -18,18 +17,14 @@
 		object-fit: cover;
 	}
 
-	&__container{
-		display: flex;
-		flex-direction: column;
-		align-content: left;
+	&__text-container{
+		min-width: 50%;
 
 		/*position: absolute;*/
 		/*top: 469px;*/
 	}
 
 	&__header{		
-		/*max-width: 258px;*/
-		/*height: 36px;*/
 		opacity: 0.78;
 		color: #ffffff;
 		font-size: 35px;

@@ -15,13 +15,6 @@ body, header, section, main, div {
   margin: 0;
   padding: 0; }
 
-p, h1, h2, h3 {
-  cursor: default; }
-
-a {
-  text-decoration: none;
-  cursor: pointer; }
-
 body::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
@@ -36,23 +29,17 @@ body::-webkit-scrollbar-thumb {
   -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
   background-color: #9bc651; }
 
-/*.o-header{
-	position: absolute;
-	top:0;
-	left:0;
-	right:0;
-	z-index:2;
+input {
+  outline: none; }
 
-	height: 141px;
-	line-height: 141px;
+p, h1, h2, h3 {
+  cursor: default; }
 
-	background-color: rgba(254, 255, 251, 0.7);
-}*/
+a {
+  text-decoration: none;
+  cursor: pointer; }
+
 .c-header {
-  /*display: flex;*/
-  /*align-content: center;*/
-  /*justify-content: center;*/
-  /*justify-content: flex-end;*/
   position: absolute;
   top: 0;
   left: 0;
@@ -60,18 +47,9 @@ body::-webkit-scrollbar-thumb {
   z-index: 2;
   height: 141px;
   line-height: 141px;
-  background-color: rgba(254, 255, 251, 0.7);
-  /*
-	&__logo-container{
-
-		NIE POTRZEBNE !
-	}
-
-*/ }
+  background-color: rgba(254, 255, 251, 0.7); }
   .c-header__logo {
     margin: 0;
-    /*width: 309px;*/
-    /*height: 41px;*/
     position: absolute;
     left: 50%;
     -webkit-transform: translateX(-50%);
@@ -109,19 +87,39 @@ body::-webkit-scrollbar-thumb {
     margin-right: 2px; }
 
 .c-iphone {
-  position: relative;
-  top: 275px;
-  width: 70%;
-  max-width: 660px;
-  min-width: 500px;
+  /* bez kontenera jst pixel-perfect*/
+  /*	position: relative;
+	top: 275px;
+	width: 70%;
+	max-width: 660px;
+*/
+  /*changed ver.*/
+  position: absolute;
+  max-width: 880px;
+  min-width: 670px;
+  width: 100%;
+  /*left: 80px;*/
+  left: -45px;
+  bottom: -230px;
+  background-color: rgba(100, 0, 0, 0.4);
+  /*min-width: 500px;*/
   /*	background: url("/public/img/iphone.png") no-repeat center;
 	background-size: contain;
 	width: 851px;
 	height: 824px;*/ }
+  .c-iphone__container {
+    display: block;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    position: relative;
+    height: 50px;
+    /*width: 50px;*/
+    width: 100%;
+    max-width: 620px;
+    background-color: red; }
 
 .o-landing {
   height: 948px;
-  /*@include flex--center;*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -139,22 +137,12 @@ body::-webkit-scrollbar-thumb {
   -o-object-fit: cover;
   object-fit: cover; }
 
-.c-landing__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -ms-flex-line-pack: left;
-  align-content: left;
+.c-landing__text-container {
+  min-width: 50%;
   /*position: absolute;*/
   /*top: 469px;*/ }
 
 .c-landing__header {
-  /*max-width: 258px;*/
-  /*height: 36px;*/
   opacity: 0.78;
   color: #ffffff;
   font-size: 35px;
@@ -171,8 +159,7 @@ body::-webkit-scrollbar-thumb {
 .c-burger {
   display: inline-block;
   width: 40px;
-  height: 22px;
-  cursor: pointer; }
+  height: 22px; }
   .c-burger__stripe {
     display: block;
     width: 100%;
@@ -181,36 +168,40 @@ body::-webkit-scrollbar-thumb {
     .c-burger__stripe:nth-of-type(2) {
       margin: 5px 0; }
   .c-burger__checkbox {
+    margin: 0;
+    padding: 0;
     display: block;
     position: absolute;
-    width: 34px;
-    height: 34px;
+    width: 40px;
+    height: 35px;
     z-index: 999;
     opacity: 0.5;
     cursor: pointer; }
 
-.c-text-sec {
+.c-article-container {
   margin-top: 117px;
   margin-bottom: 83px; }
-  .c-text-sec__header {
-    color: #222626;
-    font-size: 35px;
-    font-weight: 300;
-    line-height: 24px; }
-  .c-text-sec__text {
-    display: inline-block;
-    color: #959595;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 24px;
-    max-width: 569px;
-    width: 50%;
-    margin-bottom: 0px; }
-    .c-text-sec__text--right {
-      float: right;
-      width: 46%; }
-    .c-text-sec__text--padding {
-      padding-top: 96px; }
+
+.c-article__header {
+  color: #222626;
+  font-size: 35px;
+  font-weight: 300;
+  line-height: 24px; }
+
+.c-article__text {
+  display: inline-block;
+  color: #959595;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  max-width: 569px;
+  width: 50%;
+  margin-bottom: 0px; }
+  .c-article__text--right {
+    float: right;
+    width: 46%; }
+  .c-article__text--padding {
+    padding-top: 96px; }
 
 .c-box {
   display: -webkit-inline-box;
@@ -263,16 +254,25 @@ body::-webkit-scrollbar-thumb {
 @media screen and (max-width: 1350px) {
   .c-box {
     width: 100%;
-    padding-left: 30px; } }
+    padding-left: 30px; }
+  .c-iphone {
+    min-width: 550px;
+    left: -100px; } }
 
 /* tablet --- talbet-landscape */
+/*@media screen and (max-width: map-get($breakpoints, tablet-landscape)){*/
+/*}*/
 /* phone-landscape --- tablet */
 @media screen and (max-width: 900px) {
   .o-main {
     width: 85%;
     margin-bottom: 68px; }
   .c-icon {
-    margin-right: 30px; } }
+    margin-right: 30px; }
+  .c-iphone {
+    min-width: 450px;
+    bottom: -200px;
+    left: -125px; } }
 
 /* phone --- phone-landscape */
 @media screen and (max-width: 650px) {
@@ -289,40 +289,42 @@ body::-webkit-scrollbar-thumb {
     display: none; }
   /* do poprawy !*/
   .c-iphone {
-    background: url("/public/img/iphone-m.png") no-repeat center;
-    background-size: contain;
-    position: absolute;
+    /*background: url("/public/img/iphone-m.png") no-repeat center;*/
+    /*background-size: contain;*/
+    /*position: absolute;*/
     /*top: 400px;*/
-    top: 60%;
-    left: 35%;
+    /*top:60%;*/
+    /*left: 35%;*/
     /*right: 100px;*/
-    width: 60%;
-    height: 60%; }
-  .c-text-sec {
+    /*top: 320px;*/
+    min-width: 350px;
+    bottom: -180px;
+    left: -65px;
+    /*width: 50%;*/
+    /*height: 60%;*/ }
+  .c-article {
     margin-top: 108px;
     margin-bottom: 65px; }
-    .c-text-sec__text {
+    .c-article__text {
       width: 100%; }
-      .c-text-sec__text--right {
+      .c-article__text--right {
         float: none; }
-      .c-text-sec__text--padding {
+      .c-article__text--padding {
         padding: initial; } }
 
 /* 0 --- phone */
 @media screen and (max-width: 400px) {
   body {
     min-width: 335px; }
-  .c-header {
-    /*@include fontSizeOf(logo, 22px);*/ }
-    .c-header__logo {
-      width: -webkit-fit-content;
-      width: -moz-fit-content;
-      width: fit-content; }
+  .c-iphone {
+    min-width: 200px;
+    bottom: -140px;
+    left: -75px; }
   .c-landing__header {
     font-size: 22px; }
-  .c-text-sec__header {
+  .c-article__header {
     font-size: 22px; }
-  .c-text-sec__text {
+  .c-article__text {
     font-size: 12px; }
   .c-box {
     /*@include header-size(22px);*/ }

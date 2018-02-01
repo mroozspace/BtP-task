@@ -1,7 +1,10 @@
-.c-text-sec{
+.c-article-container{
 
 	margin-top: 117px;
 	margin-bottom: 83px;
+}
+
+.c-article{
 
 	&__header{
 		color: #222626;
@@ -24,6 +27,7 @@
 			float: right;
 			width: 46%;
 		}
+		
 		&--padding{
 			padding-top: 96px;
 		}

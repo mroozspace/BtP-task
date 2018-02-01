@@ -19,21 +19,6 @@
 	transform: translateX(-50%);
 }
 
-@mixin grid--maxwidth{
-	display: grid;
-	max-width: 1170px;
-}
-
-@mixin uppercase{
-	text-transform: uppercase;
-}
-
-@mixin container{
-	display: flex;
-	width: 100%;
-	flex-wrap: wrap;
-}
-
 /* for media queries */
 @mixin fontSizeOf($of, $size){
 	&__#{$of}{

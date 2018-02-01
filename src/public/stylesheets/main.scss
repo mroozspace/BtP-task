@@ -1,27 +1,21 @@
 @charset 'utf-8';
 
-// abstracts
 @import 'abstracts/mixins',
 				'abstracts/variables';
 
-// base
 @import 'base/base';
 
-// layout
 @import 'layout/header',
 				'layout/sections',
 				'layout/main';
 
-// components
 @import 'components/icons',
 				'components/iphone',
 				'components/landing',
 				'components/burger',
 				'components/text-sec',
 				'components/box';
-// pages
 
-// themes
 @import 'themes/theme';
 
 @import 'layout/media-queries';
