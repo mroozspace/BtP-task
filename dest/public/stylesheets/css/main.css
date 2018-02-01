@@ -1,4 +1,7 @@
 @charset "UTF-8";
+/* for all styles */
+/* for media queries */
+/*https://medium.freecodecamp.org/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862*/
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
@@ -19,6 +22,20 @@ a {
   text-decoration: none;
   cursor: pointer; }
 
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #F5F5F5; }
+
+body::-webkit-scrollbar {
+  width: 8px;
+  background-color: #F5F5F5; }
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+  background-color: #9bc651; }
+
 /*.o-header{
 	position: absolute;
 	top:0;
@@ -32,14 +49,10 @@ a {
 	background-color: rgba(254, 255, 251, 0.7);
 }*/
 .c-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  /*display: flex;*/
   /*align-content: center;*/
   /*justify-content: center;*/
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+  /*justify-content: flex-end;*/
   position: absolute;
   top: 0;
   left: 0;
@@ -47,7 +60,14 @@ a {
   z-index: 2;
   height: 141px;
   line-height: 141px;
-  background-color: rgba(254, 255, 251, 0.7); }
+  background-color: rgba(254, 255, 251, 0.7);
+  /*
+	&__logo-container{
+
+		NIE POTRZEBNE !
+	}
+
+*/ }
   .c-header__logo {
     margin: 0;
     /*width: 309px;*/
@@ -57,10 +77,11 @@ a {
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     color: #9bc651;
-    font-family: "Open Sans";
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
     font-size: 35px;
-    font-weight: 700;
-    /*margin: 0 auto;*/ }
+    font-weight: 700; }
 
 .o-main {
   max-width: 1170px;
@@ -90,6 +111,9 @@ a {
 .c-iphone {
   position: relative;
   top: 275px;
+  width: 70%;
+  max-width: 660px;
+  min-width: 500px;
   /*	background: url("/public/img/iphone.png") no-repeat center;
 	background-size: contain;
 	width: 851px;
@@ -97,20 +121,19 @@ a {
 
 .o-landing {
   height: 948px;
+  /*@include flex--center;*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center;
-  -ms-flex-line-pack: center;
-  align-content: center; }
+  align-items: center; }
 
 .c-landing__img {
   position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
   height: 948px;
   -o-object-fit: cover;
@@ -124,7 +147,6 @@ a {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 1170px;
   -ms-flex-line-pack: left;
   align-content: left;
   /*position: absolute;*/
@@ -158,6 +180,14 @@ a {
     background-color: #758160; }
     .c-burger__stripe:nth-of-type(2) {
       margin: 5px 0; }
+  .c-burger__checkbox {
+    display: block;
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    z-index: 999;
+    opacity: 0.5;
+    cursor: pointer; }
 
 .c-text-sec {
   margin-top: 117px;
@@ -229,21 +259,35 @@ a {
 .t-lgreen {
   background-color: #73933c; }
 
-@media screen and (max-width: 650px) {
+/* tablet landscape  -- laptop desktop */
+@media screen and (max-width: 1350px) {
+  .c-box {
+    width: 100%;
+    padding-left: 30px; } }
+
+/* tablet --- talbet-landscape */
+/* phone-landscape --- tablet */
+@media screen and (max-width: 900px) {
   .o-main {
     width: 85%;
     margin-bottom: 68px; }
+  .c-icon {
+    margin-right: 30px; } }
+
+/* phone --- phone-landscape */
+@media screen and (max-width: 650px) {
   .o-landing {
     height: 621px; }
   .c-landing__container {
     width: 55%; }
   .c-landing__img {
-    top: 0;
     height: 621px; }
   .c-header {
-    height: 131px; }
+    height: 131px;
+    line-height: 131px; }
   .c-icon__container {
     display: none; }
+  /* do poprawy !*/
   .c-iphone {
     background: url("/public/img/iphone-m.png") no-repeat center;
     background-size: contain;
@@ -261,8 +305,28 @@ a {
       width: 100%; }
       .c-text-sec__text--right {
         float: none; }
+      .c-text-sec__text--padding {
+        padding: initial; } }
+
+/* 0 --- phone */
+@media screen and (max-width: 400px) {
+  body {
+    min-width: 335px; }
+  .c-header {
+    /*@include fontSizeOf(logo, 22px);*/ }
+    .c-header__logo {
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content; }
+  .c-landing__header {
+    font-size: 22px; }
+  .c-text-sec__header {
+    font-size: 22px; }
+  .c-text-sec__text {
+    font-size: 12px; }
   .c-box {
-    width: 100%;
-    padding-left: 30px; }
+    /*@include header-size(22px);*/ }
     .c-box__header {
-      font-size: 27px; } }
+      font-size: 22px; }
+    .c-box__text {
+      font-size: 12px; } }

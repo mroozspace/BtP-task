@@ -1,12 +1,31 @@
 
+/* tablet landscape  -- laptop desktop */
+@media screen and (max-width: map-get($breakpoints, laptop-desktop)){
+	
+	.c-box{
+		width: 100%;
+		padding-left: 30px;
+	}
+}
 
+/* tablet --- talbet-landscape */
+@media screen and (max-width: map-get($breakpoints, tablet-landscape)){
+	
+}
 
-@media screen and (max-width: map-get($breakpoints, phone-landscape)){
-
+/* phone-landscape --- tablet */
+@media screen and (max-width: map-get($breakpoints, tablet)){
 	.o-main{
 		width: 85%;
 		margin-bottom: 68px;
 	}
+	.c-icon{
+		margin-right: 30px;
+	}
+}
+
+/* phone --- phone-landscape */
+@media screen and (max-width: map-get($breakpoints, phone-landscape)){
 
 	.o-landing{
 		height: 621px;
@@ -19,19 +38,21 @@
 		}
 
 		&__img{
-		top:0;
-		height: 621px;
+			height: 621px;
 		}
 	}
 
 	.c-header{
 		height: 131px;
+		line-height: 131px;
 	}
 	
 	.c-icon__container{
 		display:none;
 	}
 
+
+	/* do poprawy !*/
 	.c-iphone{
 		background: url("/public/img/iphone-m.png") no-repeat center;
 		background-size: contain;
@@ -55,17 +76,42 @@
 
 			&--right{
 				float: none;
+
+			}
+
+			&--padding{
+				padding: initial;
 			}
 		}
 	}
+}
 
-	.c-box{
-		width: 100%;
-		padding-left: 30px;
-		
-		&__header{
-			font-size: 27px;
-		}
+/* 0 --- phone */ 
+@media screen and (max-width: map-get($breakpoints, phone)){
+	body{
+		min-width: 335px;
 	}
 
+	.c-header{
+		&__logo{
+			width: fit-content;
+		}
+		/*@include fontSizeOf(logo, 22px);*/
+	}
+
+	.c-landing{
+		@include fontSizeOf(header, 22px);
+	}
+
+	.c-text-sec{
+		@include fontSizeOf(header, 22px);
+		@include fontSizeOf(text, 12px);	
+	}
+
+	.c-box{
+		/*@include header-size(22px);*/
+		@include fontSizeOf(header, 22px);
+		@include fontSizeOf(text, 12px);	
+	}
+	
 }

@@ -1,10 +1,15 @@
 
+
+
+
 $breakpoints:(
 	/*'huge-up' : 1800px,*/
 	/*'big-desktop-up' : */
-	/*'laptop-desktop-up' : */
-	/*'tablet-landscape-up' : */
-	/*'tablet-portrait-up' :   //min width*/
+	'laptop-desktop' : 1350px,
+	'tablet-landscape' : 1200px,
+	'tablet' : 900px,  
 	'phone-landscape' : 650px,
-	'phone-s': 400px,
+	'phone': 400px,
 );
+
+/*https://medium.freecodecamp.org/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862*/

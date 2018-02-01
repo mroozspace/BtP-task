@@ -13,10 +13,10 @@
 
 .c-header{
 	
-	display: flex;
+	/*display: flex;*/
 	/*align-content: center;*/
 	/*justify-content: center;*/
-	justify-content: flex-end;
+	/*justify-content: flex-end;*/
 	//dodane
 
 	position: absolute;
@@ -29,11 +29,14 @@
 	line-height: 141px;
 
 	background-color: rgba(254, 255, 251, 0.7);
-
+	
+/*
 	&__logo-container{
 
-
+		NIE POTRZEBNE !
 	}
+
+*/
 
 	&__logo{
 		margin:0;
@@ -42,10 +45,9 @@
 		
 		@include absolute--center;
 		color: #9bc651;
-		font-family: "Open Sans";
+		width: fit-content;
 		font-size: 35px;
 		font-weight: 700;
-		/*margin: 0 auto;*/
 	}
 
 

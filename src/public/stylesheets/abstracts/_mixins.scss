@@ -1,3 +1,4 @@
+/* for all styles */
 @mixin flex--center{
 	display:flex;
 	justify-content: center;
@@ -31,4 +32,11 @@
 	display: flex;
 	width: 100%;
 	flex-wrap: wrap;
+}
+
+/* for media queries */
+@mixin fontSizeOf($of, $size){
+	&__#{$of}{
+		font-size: $size;
+	}
 }

@@ -14,4 +14,14 @@
 			margin:5px 0;
 		}
 	}
+
+	&__checkbox{
+    display: block;
+		position: absolute;
+    width: 34px;
+    height: 34px;
+    z-index: 999;
+    opacity: 0.5;
+    cursor: pointer;
+	}
 }
