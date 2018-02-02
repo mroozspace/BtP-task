@@ -6,11 +6,6 @@
 		width: 100%;
 		padding-left: 30px;
 	}
-
-	.c-iphone{
-		min-width: 550px;
-		left: -100px;
-	}
 }
 
 /* tablet --- talbet-landscape */
@@ -27,31 +22,11 @@
 	.c-icon{
 		margin-right: 30px;
 	}
-
-	.c-iphone{
-		min-width: 450px;
-		bottom: -200px;
-		left: -125px;
-	}
 }
 
 /* phone --- phone-landscape */
 @media screen and (max-width: map-get($breakpoints, phone-landscape)){
 
-	.o-landing{
-		height: 621px;
-	}
-
-	.c-landing{
-		
-		&__container{
-			width: 55%;
-		}
-
-		&__img{
-			height: 621px;
-		}
-	}
 
 	.c-header{
 		height: 131px;
@@ -62,34 +37,15 @@
 		display:none;
 	}
 
-	/* do poprawy !*/
-	.c-iphone{
-		/*background: url("/public/img/iphone-m.png") no-repeat center;*/
-		/*background-size: contain;*/
-
-		/*position: absolute;*/
-		/*top: 400px;*/
-		/*top:60%;*/
-		/*left: 35%;*/
-		/*right: 100px;*/
-		/*top: 320px;*/
-		min-width: 350px;
-		bottom: -180px;
-		left: -65px;
-		/*width: 50%;*/
-		/*height: 60%;*/
-	}
-
 	.c-article{
 		margin-top: 108px;
 		margin-bottom: 65px;
 
 		&__text{
-		width: 100%;
+			width: 100%;
 
 			&--right{
 				float: none;
-
 			}
 
 			&--padding{
@@ -97,6 +53,32 @@
 			}
 		}
 	}
+
+	.c-iphone{
+		img{
+			right: 6px;
+			bottom: 107px;
+		}
+	}
+
+	.c-header{
+		@include fontSizeOf(logo, 24px);
+	}
+
+	.c-landing{
+		@include fontSizeOf(header, 24px);
+	}
+
+	.c-article{
+		@include fontSizeOf(header, 24px);
+		@include fontSizeOf(text, 13px);	
+	}
+
+	.c-box{
+		@include fontSizeOf(header, 24px);
+		@include fontSizeOf(text, 13px);	
+	}
+
 }
 
 /* 0 --- phone */ 
@@ -106,9 +88,15 @@
 	}
 
 	.c-iphone{
-		min-width: 200px;
-		bottom: -140px;
-		left: -75px;
+		img{
+			right: -1px;
+			bottom: 107px;
+		}
+	}
+
+
+	.c-header{
+		@include fontSizeOf(logo, 22px);
 	}
 
 	.c-landing{
@@ -121,7 +109,6 @@
 	}
 
 	.c-box{
-		/*@include header-size(22px);*/
 		@include fontSizeOf(header, 22px);
 		@include fontSizeOf(text, 12px);	
 	}

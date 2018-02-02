@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="public/stylesheets/css/main.css">
 	<title>Bespoke software solutions | Beside the Park</title>
 </head>
-<body>
+<body class="landing-page">
 
 	<header class="c-header">
 		<h1 class="c-header__logo">Beside the park</h1>
@@ -22,9 +22,7 @@
 		</nav>	
 	</header>
 
-<main class="o-main">
-
-	<section class="o-landing">
+<section class="o-landing">
 
 		<img class="c-landing__img" src="public/img/landing-bg.jpg" alt="landscape">
 		<!-- konwertowane do jpg - 10x mniej waży -->
@@ -32,20 +30,27 @@
 		<!-- nie dodałem, bo mi się nie podoba i uznałem to za jedno z niedociągnięć -->
 
 		<div class="c-landing__text-container">
-			<h2 class="c-landing__header">Lorem impsum</h2>
-			<p class="c-landing__text">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-			</p>		
+			<div class="o-container">
+				<h2 class="c-landing__header">Lorem impsum</h2>
+				<p class="c-landing__text">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				</p>		
+			</div>
 		</div>
 
-	<div class="c-iphone__container">
-		<img class="c-iphone" src="public/img/iphone.png">
-	</div>
+
 		<!-- <div class="c-iphone"></div> -->
 			<!-- na początku zastosowałem img, następnie zmieniłem na div, gdzie można zmienić źródło obrazka przy użyciu media queries -->
 	</section>
-	
+
+
+<main class="o-container">
+
 	<article class="c-article-container">
+		<div class="c-iphone">
+			<img class="" src="public/img/iphone.png">
+		</div>
+
 		<h2 class="c-article__header">Lorem Impsum</h2>
 		<p class="c-article__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br> <br>
 

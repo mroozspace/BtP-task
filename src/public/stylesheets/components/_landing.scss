@@ -1,7 +1,7 @@
 .o-landing{
-	height: 948px;
-	display: flex;
-	align-items: center;
+	position: relative;
+	height: 100vh;
+	width: 100%;
 }
 
 .c-landing{
@@ -9,19 +9,18 @@
 	&__img{
 		position: absolute;
 		top:0;
-		left: 0;
-		right: 0;
+		left:0;
 
 		width:100%;
-		height: 948px;
+		height: 100%;
 		object-fit: cover;
 	}
 
 	&__text-container{
-		min-width: 50%;
-
-		/*position: absolute;*/
-		/*top: 469px;*/
+		width: 100%;
+		position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 	}
 
 	&__header{		

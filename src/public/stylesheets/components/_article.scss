@@ -1,10 +1,10 @@
-.c-article-container{
-
-	margin-top: 117px;
-	margin-bottom: 83px;
-}
-
 .c-article{
+
+	&-container{
+		position: relative;
+		margin-top: 117px;
+		margin-bottom: 83px;
+	}
 
 	&__header{
 		color: #222626;

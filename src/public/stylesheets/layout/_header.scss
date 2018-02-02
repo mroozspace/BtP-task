@@ -1,6 +1,6 @@
 .c-header{
 	
-	position: absolute;
+	position: fixed;
 	top:0;
 	left:0;
 	right:0;
@@ -15,8 +15,11 @@
 		margin:0;
 		
 		@include absolute--center;
+    display: flex;
+    align-items: center;
+    height: 100%;
+
 		color: #9bc651;
-		width: fit-content;
 		font-size: 35px;
 		font-weight: 700;
 	}

@@ -7,13 +7,14 @@
 
 @import 'layout/header',
 				'layout/sections',
-				'layout/main';
+				'layout/landing-page',
+				'layout/container';
 
 @import 'components/icons',
 				'components/iphone',
 				'components/landing',
 				'components/burger',
-				'components/text-sec',
+				'components/article',
 				'components/box';
 
 @import 'themes/theme';

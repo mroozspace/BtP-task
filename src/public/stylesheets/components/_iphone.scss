@@ -1,37 +1,15 @@
 .c-iphone{
-/* bez kontenera jst pixel-perfect*/
-/*	position: relative;
-	top: 275px;
-	width: 70%;
-	max-width: 660px;
-*/
+		position: absolute;
+    bottom: calc(100% - 154px);
+    right: 0;
+    width: 50%;
 
-	/*changed ver.*/
-	
-
-	position: absolute;
-	max-width: 880px;
-	min-width: 670px;
-	width: 100%;
-	/*left: 80px;*/
-	left: -45px;
-	bottom: -230px;
-	background-color: rgba(100, 0, 0, 0.4);
-
-	&__container{
-		display: block;
-		align-self: flex-end; 
+	img {
 		position: relative;
-		height: 50px;
-		/*width: 50px;*/
-		width: 100%;
-		max-width: 620px;
-		background-color: red;
-	}
-	/*min-width: 500px;*/
-/*	background: url("/public/img/iphone.png") no-repeat center;
-	background-size: contain;
-	width: 851px;
-	height: 824px;*/
+		right: 40px;
+		bottom: 40px;
 
+		max-width: 110%;
+		/*max-width: 660px;*/
+	}
 }

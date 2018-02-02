@@ -12,6 +12,15 @@
 		&:nth-of-type(2){
 			margin:5px 0;
 		}
+
+		/* ------------------ */
+		
+		transition:
+			transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+			background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+			opacity 0.55s ease;
+
+		/* ------------------ */
 	}
 
 	&__checkbox{
@@ -22,7 +31,34 @@
     width: 40px;
     height: 35px;
     z-index: 999;
-    opacity: 0.5;
+    opacity: 0;
     cursor: pointer;
+
+		/* ------------------ */
+
+		&:checked ~ .c-burger__stripe:nth-of-type(1){
+			opacity: 1;
+			background-color: #9bc651;
+			transform: 
+				rotate(45deg)
+				translate(10px, 8px);
+		}
+
+		&:checked ~ .c-burger__stripe:nth-of-type(2){
+			opacity: 1;
+			background-color: #9bc651;
+			transform: 
+				scale(0.05);
+		}
+
+		&:checked ~ .c-burger__stripe:nth-of-type(3){
+			opacity: 1;
+			background-color: #9bc651;
+			transform: 
+				rotate(-45deg)
+				translate(5px, -3px);
+		}
+
+		/* ------------------ */
 	}
 }
