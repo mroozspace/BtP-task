@@ -1,0 +1,36 @@
+@keyframes disappear{
+	0%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+	}
+}
+
+
+@keyframes showUp{
+	0%{
+		opacity:0;
+	}
+	100%{
+		opacity:1;
+	}
+}
+
+@keyframes showUpPartial{
+	0%{
+		opacity:0;
+	}
+	100%{
+		opacity:0.78;
+	}
+}
+
+@keyframes slideInBottom{
+	0%{
+		transform: translateY(100%);
+	}
+	100%{
+		transform: translateY(0%);
+	}
+}

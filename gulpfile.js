@@ -27,7 +27,7 @@ gulp.task("img", ()=>{
 gulp.task("js", ()=>{
 	gulp.src("src/public/js/*.js")
 		.pipe(concat("main.js"))
-		.pipe(uglify())
+		// .pipe(uglify())
 		.pipe(gulp.dest("dest/public/js"))
 });
 

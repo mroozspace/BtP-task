@@ -4,6 +4,8 @@
     right: 0;
     width: 50%;
 
+  animation: 3.5s cubic-bezier(.36,.48,.16,.98) forwards slideInBottom;
+
 	img {
 		position: relative;
 		right: 40px;

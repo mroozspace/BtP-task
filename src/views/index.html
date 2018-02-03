@@ -9,11 +9,16 @@
 </head>
 <body class="landing-page">
 
-	<header class="c-header">
+	<header class="c-header js-header">
 		<h1 class="c-header__logo">Beside the park</h1>
+
 		<nav class="c-icon__container">
-			<img class="c-icon" src="public/icons/search.png">
-			<div class="c-icon c-burger">
+			<div class="c-icon-search__container">
+				<img class="c-icon js-searchIcon" src="public/icons/search.png">
+				<input class="c-search js-searchInput" type="text" name="search">
+			</div>
+
+			<div class="c-icon c-burger js-burger">
 				<input type="checkbox" class="c-burger__checkbox" name="c-burger__checkbox">
 				<span class="c-burger__stripe"></span>
 				<span class="c-burger__stripe"></span>
@@ -22,25 +27,32 @@
 		</nav>	
 	</header>
 
-<section class="o-landing">
+	<nav class="c-menu">
+		<ul class="c-menu__container">
+			<li class="c-menu__item"><a href="">About us</a></li>
+			<li class="c-menu__item"><a href="">Built to last</a></li>
+			<li class="c-menu__item"><a href="">Our clients</a></li>
+			<li class="c-menu__item"><a href="">Sign up</a></li>
+			<li class="c-menu__item"><a href="">Pictures</a></li>
+		</ul>
+	</nav>
 
-		<img class="c-landing__img" src="public/img/landing-bg.jpg" alt="landscape">
+	<section class="o-hero">
+
+		<img class="c-hero__img" src="public/img/landing-bg.jpg" alt="landscape">
 		<!-- konwertowane do jpg - 10x mniej waży -->
 		<!-- na dole we wzorze zielony pasek z background  -->
 		<!-- nie dodałem, bo mi się nie podoba i uznałem to za jedno z niedociągnięć -->
 
-		<div class="c-landing__text-container">
+		<div class="c-hero__text-container">
 			<div class="o-container">
-				<h2 class="c-landing__header">Lorem impsum</h2>
-				<p class="c-landing__text">
+				<h2 class="c-hero__header">Lorem impsum</h2>
+				<p class="c-hero__text">
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 				</p>		
 			</div>
 		</div>
 
-
-		<!-- <div class="c-iphone"></div> -->
-			<!-- na początku zastosowałem img, następnie zmieniłem na div, gdzie można zmienić źródło obrazka przy użyciu media queries -->
 	</section>
 
 
@@ -105,5 +117,6 @@
 	</section>
 
 </main>
+<script src="public/js/main.js" ></script>
 </body>
 </html>

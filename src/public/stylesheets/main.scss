@@ -3,19 +3,22 @@
 @import 'abstracts/mixins',
 				'abstracts/variables';
 
-@import 'base/base';
+@import 'base/base',
+				'base/animations';
 
-@import 'layout/header',
-				'layout/sections',
-				'layout/landing-page',
-				'layout/container';
-
-@import 'components/icons',
-				'components/iphone',
-				'components/landing',
+@import 'components/box',
 				'components/burger',
-				'components/article',
-				'components/box';
+				'components/container',
+				'components/icons',
+				'components/iphone',
+				'components/hero',
+				'components/search';
+
+@import 'layout/article',
+				'layout/header',
+				'layout/menu';
+
+@import 'pages/landing-page';
 
 @import 'themes/theme';
 

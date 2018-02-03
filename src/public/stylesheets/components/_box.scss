@@ -21,15 +21,23 @@
 	}
 
 	&__link{
-		/*height: 12px;*/
 		font-size: 14px;
 		font-weight: 700;
-		/*line-height: 24px;*/
 
 		/* nie podobały mi się różne wysokości linków,
-		ustawiłem jednolitą */
+		ustawiłem jedną dla wszystkich */
 		position: absolute;
 		bottom: 40px;
+
+		border-bottom: 2px solid transparent;
+		padding-bottom: 1px;
+		
+		transition: all 0.3s ease-in; 
+
+		&:hover{
+			border-bottom: 2px solid white;
+		}
+
 	}
 
 	&--big{

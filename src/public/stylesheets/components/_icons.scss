@@ -1,11 +1,17 @@
 .c-icon{
 	
-	margin-right: 76px;
-
 	&__container{
 		@include inline-flex--center;
 		height: 100%;
 		float: right;
 		margin-right: 2px;
+		transition: all 0.5s ease;
 	}
+
+	
+	position: relative;
+	z-index: 3;
+	margin-right: 76px;
+	cursor: pointer;
+	
 }
