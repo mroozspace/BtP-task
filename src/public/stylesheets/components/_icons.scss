@@ -8,6 +8,10 @@
 		transition: all 0.5s ease;
 	}
 
+	&-search__container{
+		position: relative;
+		@include flex--center;
+	}
 	
 	position: relative;
 	z-index: 3;

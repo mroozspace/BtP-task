@@ -202,6 +202,19 @@ a {
     margin-right: 2px;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease; }
+  .c-icon-search__container {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-line-pack: center;
+    align-content: center; }
 
 .c-iphone {
   position: absolute;
@@ -268,14 +281,12 @@ a {
   border-radius: 15px;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  visibility: hidden;
-  -webkit-transform: translate(-180px, -105%);
-  transform: translate(-180px, -105%); }
+  visibility: hidden; }
   .c-search:focus {
     background-color: rgba(155, 198, 81, 0.6); }
   .c-search-is-open {
-    -webkit-transform: translate(-60%, -100%);
-    transform: translate(-60%, -100%);
+    -webkit-transform: translateX(-42px);
+    transform: translateX(-42px);
     width: 260px;
     visibility: visible; }
   .c-search--disappear {
@@ -418,8 +429,8 @@ a {
   .c-icon {
     margin-right: 30px; }
   .c-search {
-    -webkit-transform: translate(-60px, -105%);
-    transform: translate(-60px, -105%); } }
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px); } }
 
 /* phone --- phone-landscape */
 @media screen and (max-width: 650px) {
