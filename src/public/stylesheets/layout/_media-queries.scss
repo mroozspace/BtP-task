@@ -42,7 +42,8 @@
 
 
 	.c-header{
-		height: 131px;
+		// height: 131px;
+		height: 70px;
 	}
 	
 	.c-icon__container{
@@ -50,8 +51,12 @@
 	}
 
 	.c-article{
-		margin-top: 108px;
-		margin-bottom: 65px;
+
+		&-container{
+			// margin-top: 108px;
+			margin-top: 60px;		
+			margin-bottom: 65px;	
+		}		
 
 		&__text{
 			width: 100%;
@@ -99,10 +104,15 @@
 		min-width: 335px;
 	}
 
+	.o-hero{
+		height: 58vh;
+	}
+
 	.c-iphone{
 		img{
-			right: -1px;
+			right: 20px;
 			bottom: 107px;
+			max-width: 120%;
 		}
 	}
 
@@ -112,6 +122,11 @@
 
 	.c-hero{
 		@include fontSizeOf(header, 22px);
+
+		&__text{
+			max-width: 80%;
+			line-height: 16px;
+		}
 	}
 
 	.c-article{
@@ -127,6 +142,7 @@
 
 /* media for screen height */
 @media screen and (max-height: map-get($breakpoints, min-height)){
+
 	.c-menu{
 	
 		&__container{
@@ -137,6 +153,16 @@
 		&__item{
 			margin: 0;
 			padding: 2px;
+		}
+	}
+
+	.c-hero__text{
+		max-width: 60%;
+	}
+
+	.c-iphone{
+		img{
+			max-width: 80%;
 		}
 	}
 }
