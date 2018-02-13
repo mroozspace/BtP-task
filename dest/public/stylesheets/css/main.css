@@ -42,6 +42,9 @@ a {
   text-decoration: none;
   cursor: pointer; }
 
+.is-hidden {
+  visibility: hidden; }
+
 @-webkit-keyframes disappear {
   0% {
     opacity: 1; }
@@ -227,12 +230,12 @@ a {
     position: relative;
     right: 40px;
     bottom: 40px;
-    max-width: 110%;
+    max-width: 90%;
     /*max-width: 660px;*/ }
 
 .o-hero {
   position: relative;
-  height: 100vh;
+  height: 75vh;
   width: 100%; }
 
 .c-hero__img {
@@ -325,7 +328,7 @@ a {
   left: 0;
   right: 0;
   z-index: 2;
-  height: 141px;
+  height: 100px;
   background-color: rgba(254, 255, 251, 0.7); }
   .c-header__logo {
     margin: 0;
@@ -368,8 +371,8 @@ a {
   z-index: 1;
   background-color: #fefffb;
   border-left: 2px solid #9bc651;
-  -webkit-transition: 1s all ease;
-  transition: 1s all ease;
+  -webkit-transition: 0.5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
   -webkit-transform: translateX(100vw);
   transform: translateX(100vw); }
   .c-menu__container {
@@ -411,11 +414,13 @@ a {
 @media screen and (max-width: 1350px) {
   .c-box {
     width: 100%;
-    padding-left: 30px; } }
+    padding-left: 30px; }
+  .o-hero {
+    height: 75vh; }
+  .c-iphone {
+    max-width: 90%; } }
 
 /* tablet --- talbet-landscape */
-/*@media screen and (max-width: map-get($breakpoints, tablet-landscape)){*/
-/*}*/
 /* phone-landscape --- tablet */
 @media screen and (max-width: 900px) {
   /*.o-container{
@@ -491,12 +496,16 @@ a {
 
 /* media for screen height */
 @media screen and (max-height: 500px) {
+  .c-header {
+    height: 80px; }
   .c-menu__container {
     padding-top: 55px;
     background-position: 5% 65%; }
   .c-menu__item {
     margin: 0;
     padding: 2px; }
+  .c-article-container {
+    margin-top: initial; }
   .c-hero__text {
     max-width: 60%; }
   .c-iphone img {

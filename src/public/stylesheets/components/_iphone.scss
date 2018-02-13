@@ -1,8 +1,8 @@
 .c-iphone{
-		position: absolute;
-    bottom: calc(100% - 154px);
-    right: 0;
-    width: 50%;
+	position: absolute;
+     bottom: calc(100% - 154px);
+     right: 0;
+     width: 50%;
 
   animation: 3.5s cubic-bezier(.36,.48,.16,.98) forwards slideInBottom;
 
@@ -11,7 +11,8 @@
 		right: 40px;
 		bottom: 40px;
 
-		max-width: 110%;
+		// max-width: 110%;
+		max-width: 90%;
 		/*max-width: 660px;*/
 	}
 }

@@ -30,8 +30,21 @@ function headerSmall(){
 
 function toggleMenu(){
 
+	menu.classList.add('is-hidden');
+
 	burger.addEventListener('click', ()=>{
 		menu.classList.toggle('c-menu-is-open');
+	});
+
+
+	burger.addEventListener('click', ()=>{
+		if ( menu.classList.contains('c-menu-is-open') ){
+				menu.classList.remove('is-hidden');
+		} else {
+			setTimeout( ()=> {
+				menu.classList.add('is-hidden');
+			}, 400);
+		}
 	});
 }
 

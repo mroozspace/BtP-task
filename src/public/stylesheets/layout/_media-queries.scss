@@ -6,12 +6,18 @@
 		width: 100%;
 		padding-left: 30px;
 	}
+	.o-hero{
+		height: 75vh;
+	}
+
+	.c-iphone{
+		max-width: 90%;
+	}
 }
 
 /* tablet --- talbet-landscape */
-/*@media screen and (max-width: map-get($breakpoints, tablet-landscape)){*/
-	
-/*}*/
+// @media screen and (max-width: map-get($breakpoints, tablet-landscape)){
+// }
 
 /* phone-landscape --- tablet */
 @media screen and (max-width: map-get($breakpoints, tablet)){
@@ -143,6 +149,10 @@
 /* media for screen height */
 @media screen and (max-height: map-get($breakpoints, min-height)){
 
+	.c-header{
+		height: 80px;
+	}
+
 	.c-menu{
 	
 		&__container{
@@ -154,6 +164,10 @@
 			margin: 0;
 			padding: 2px;
 		}
+	}
+
+	.c-article-container{
+		margin-top: initial;
 	}
 
 	.c-hero__text{
